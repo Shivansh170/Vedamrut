@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <title>Signup Form</title>
+</head>
+
+<body>
+    <div class="signup-container">
+        <form action="/signup" class="signup-form" method='POST'>
+            <p class="signup-heading">Signup to</p>
+            <h2 class="signup-subheading">Join the CRICINFO family</h2>
+            <input type="text" id="name" placeholder="Full Name" class="input-field" name="username" />
+            <input required type="password" id="password" placeholder="Password" class="input-field" name="password" />
+            <p class="error-message" id="error-message"></p>
+            <div class="button-container">
+                <button>SIGNUP</button>
+                <p class="signin-link">
+                    <a href="{{ url_for('login') }}">Already registered? Sign In Now</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
